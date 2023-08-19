@@ -16,12 +16,9 @@ public class PlayerMove : MonoBehaviour
     void FixedUpdate()
     {
         float x = Input.GetAxis("Horizontal");
-
-        Vector3 velocity = new Vector3(x, 0, 0);
-        velocity = velocity.normalized * _playerSpeed;
+        Vector3 velocity = new Vector3(x, 0, 0) * _playerSpeed;
+        velocity.y = _rb.velocity.y;
         _rb.velocity = velocity;
-
-        Debug.Log(velocity);
     }
         
 }
