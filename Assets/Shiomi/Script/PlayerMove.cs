@@ -19,6 +19,5 @@ public class PlayerMove : MonoBehaviour
         Vector3 velocity = new Vector3(x, 0, 0) * _playerSpeed;
         velocity.y = _rb.velocity.y;
         _rb.velocity = velocity;
-    }
-        
+    }    
 }
